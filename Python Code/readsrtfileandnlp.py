@@ -15,6 +15,10 @@ for i in range(len(sub)):
     endtime.append(case.end)
 
 verbset,verbpos,nounset,nounpos,pronset,pronpos,adjecset,adjpos,advset,advpos,adpset,adppos,conjset,conjpos,detset,detpos,numset,numpos,prtset,prtpos,xset,xpos=cattags(text)
+wordlist=nounset+verbset+adjecset
 
 
-print nounset+verbset+adjecset
+def wordl():
+
+    return wordlist
+
