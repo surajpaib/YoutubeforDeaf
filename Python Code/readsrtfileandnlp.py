@@ -1,8 +1,7 @@
-
 import nltk
 import pysrt
 from nltk import word_tokenize
-from categorize.py import cattags
+from catergorize import cattags
 
 
 sub=pysrt.open('subtitle.srt')
@@ -18,5 +17,4 @@ for i in range(len(sub)):
 verbset,verbpos,nounset,nounpos,pronset,pronpos,adjecset,adjpos,advset,advpos,adpset,adppos,conjset,conjpos,detset,detpos,numset,numpos,prtset,prtpos,xset,xpos=cattags(text)
 
 
-
-
+print nounset+verbset+adjecset
