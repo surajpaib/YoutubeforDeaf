@@ -2,7 +2,7 @@ import nltk
 import pysrt
 from nltk import word_tokenize
 from catergorize import cattags
-
+import pandas as pd
 
 sub=pysrt.open('subtitle.srt')
 starttime=[]
@@ -21,4 +21,15 @@ wordlist=nounset+verbset+adjecset
 def wordl():
 
     return wordlist
+
+
+dataframe=pd.DataFrame(wordlist)
+
+dataframe=dataframe.drop_duplicates(keep='first')
+
+dataframe.to_csv('wordlist1.csv',index=0,header=0)
+
+
+
+
 
