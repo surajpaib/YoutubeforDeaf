@@ -14,7 +14,7 @@ for row in wordloop:
     k=t[1:-1]
     searchwords.append(k)
 
-    print str('/^[' + str(k[0].upper()) + str(k[0]) + ']' + str(k[1:-1]) +'['+str(k[-1])+']')
+
 
 
 def woi():
