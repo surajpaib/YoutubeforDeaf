@@ -27,7 +27,7 @@ def cattags(text):
     xpos = []
 
     for i in range(len(text)):
-
+## Run NLP to categorize words into their respective grammatical equivalents
         tokens = word_tokenize(text[i])
         nlptext = nltk.pos_tag(tokens, tagset='universal')
         for j in range(len(nlptext)):
