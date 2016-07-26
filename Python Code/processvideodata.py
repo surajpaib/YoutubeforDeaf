@@ -22,6 +22,10 @@ output=output+".en.vtt"
 command2="youtube-dl -o %(title)s --skip-download --write-auto-sub --sub-lang en https://www.youtube.com/watch?v=qdfmIUO__y8"
 subprocess.call(command2.split(),shell=True)
 
+# Download Video File
+command3="youtube-dl -o %(title)s.%(ext)s --format mp4 https://www.youtube.com/watch?v=qdfmIUO__y8"
+subprocess.call(command3.split(),shell=True)
+
 
 Subtitleload(output)
 

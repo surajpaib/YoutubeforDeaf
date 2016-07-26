@@ -1,12 +1,14 @@
+# Prepare Metadata with start time, end time and word order
 import moviepy
 import sys
 import csv
-import pysrt
+import sys.path
 sys.path.append('..\Python Code')
 import readsrtfileandnlp as rsf
 import retrievematches as rm
 import pandas as pd
 
+# Load functions from file to get timing and word information
 filename=rm.filematches()
 start,end=rsf.subtitledetail()
 ifile=open('..\Python Code\wordlist1.csv',"rb")
@@ -17,6 +19,8 @@ etime=[]
 wordno=[]
 flist=[]
 
+
+# Extract information and store to metadata file
 for row in reader:
     for f in filename:
         if (f.replace("'","")==str(row[0])+".mp4"):

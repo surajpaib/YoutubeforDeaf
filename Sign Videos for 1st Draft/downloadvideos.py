@@ -15,6 +15,8 @@ searchwords=[]
 for row in wordloop:
     t=str(row).strip('[]')
     k=t[1:-1]
+    command="youtube-dl -o '%(title)s' ytuser:isldictionary --match-title "+str(k)
+    subprocess.call(command.split())
     searchwords.append(k)
 
 
