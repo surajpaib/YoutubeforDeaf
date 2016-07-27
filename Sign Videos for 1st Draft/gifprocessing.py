@@ -2,7 +2,6 @@
 import moviepy
 import sys
 import csv
-import sys.path
 sys.path.append('..\Python Code')
 import readsrtfileandnlp as rsf
 import retrievematches as rm
